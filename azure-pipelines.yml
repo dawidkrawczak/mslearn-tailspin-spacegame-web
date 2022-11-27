@@ -1,4 +1,11 @@
 trigger:
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students(d2923b72-f926-4de6-9d87-059749983416)'
+    appType: 'webApp'
+    WebAppName: 'dawidkrawczak-zad2'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 - '*'
 
 pool:
